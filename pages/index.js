@@ -2,10 +2,11 @@ import Head from 'next/head'
 import Login from '../components/login'
 import { useMoralis } from "react-moralis"
 
-export default function Home() {
-  const { isAuthenticated } = useMoralis()
 
-  if (!isAuthenticated) return <Login />;
+export default function Home() {
+  const { isAuthenticated, logout } = useMoralis()
+
+  if (!isAuthenticated) return <Login />;  
 
   return (
     <div className="">
@@ -15,6 +16,8 @@ export default function Home() {
       </Head>
 
       <h1>Welcome to the metaverse playground</h1>
+
+      <button onClick={logout}>Logout</button>
 
       
 

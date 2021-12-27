@@ -1,9 +1,12 @@
 import Image from "next/image"
 import { useMoralis } from "react-moralis"
+import Logo from "../public/vercel.svg"
 
 function login() {
 
-    const { authenticate } = useMoralis()
+    const { authenticate, isInitializing } = useMoralis()
+
+    if (isInitializing) return null;
 
     return (
         <div className="bg-black relative">
