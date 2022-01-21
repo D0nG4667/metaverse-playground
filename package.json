@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev-https": "local-ssl-proxy --key ../sslcert/localhost-key.pem --cert ../sslcert/localhost.pem --source 4000 --target 3000",
     "build": "next build",
     "start": "next start"
   },
@@ -11,7 +12,8 @@
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-moralis": "^0.3.11"
+    "react-moralis": "^0.3.11",
+    "timeago-react": "^3.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { useMoralis } from "react-moralis"
-import Logo from "../public/vercel.svg"
+
 
 function login() {
 
